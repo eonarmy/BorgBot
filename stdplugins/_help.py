@@ -3,7 +3,7 @@ from telethon import events, functions, __version__
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="helpme ?(.*)", allow_sudo=True))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="help ?(.*)", allow_sudo=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -12,13 +12,13 @@ async def _(event):
         s_help_string = borg._plugins[splugin_name].__doc__
     else:
         s_help_string = ""
-    help_string = """@UniBorg
+    help_string = """@XHACKERKUNAL
 
-Userbot Help Window of @arnab431
+Userbot Help Window of @XHACKERKUNAL
 Python {}
 Telethon {}
 
-Github : https://github.com/ArnabXD/BorgBot""".format(
+JOIN US: @eonarmy""".format(
         sys.version,
         __version__
     )
@@ -54,4 +54,4 @@ async def _(event):
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""@arnab431""")
+    await event.edit("""@XHACKERKUNAL""")
