@@ -1,11 +1,11 @@
-""".admin Plugin for @UniBorg"""
+""".galilist for get Gali List"""
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("gaali"))
+@borg.on(admin_cmd("galilist"))
 async def _(event):
     if event.fwd_from:
         return
