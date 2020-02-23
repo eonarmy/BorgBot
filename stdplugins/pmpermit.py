@@ -1,7 +1,7 @@
 """Personal Message Spammer
 Available Commands:
-.approve
-.block
+.approvehim
+.blockhim
 .list approved pms"""
 import asyncio
 import json
@@ -15,10 +15,10 @@ borg.storage.PM_WARNS = {}
 borg.storage.PREV_REPLY_MESSAGE = {}
 
 
-BAALAJI_TG_USER_BOT = "My Master hasn't approved you to PM."
+BAALAJI_TG_USER_BOT = "XHACKERKUNAL hasn't approved you to PM."
 TG_COMPANION_USER_BOT = "Please wait for his response and don't spam his PM."
-UNIBORG_USER_BOT_WARN_ZERO = "I am currently offline. Please do not SPAM me."
-UNIBORG_USER_BOT_NO_WARN = "Hi! I will answer to your message soon. Please wait for my response and don't spam my PM. Thanks"
+UNIBORG_USER_BOT_WARN_ZERO = "I am currently offline. Please **DON'T SPAM** with me.Otherwise gaand mara dunga"
+UNIBORG_USER_BOT_NO_WARN = "[~~~~~~~~~XHACKERKUNAL~~~~~~~~~]\n\nHello, I will answer to your message soon.\n\nPlease wait for my response and Please **DON'T SPAM** with me.\n\nTag me in @JOINEONARMY FOR GET FAST RESPONSE."
 
 
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
@@ -53,7 +53,7 @@ async def monito_p_m_s(event):
             borg.storage.PREV_REPLY_MESSAGE[chat.id] = r
 
 
-@borg.on(admin_cmd("approvepm ?(.*)"))
+@borg.on(admin_cmd("approvehim ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -73,7 +73,7 @@ async def approve_p_m(event):
                 await event.delete()
 
 
-@borg.on(admin_cmd("blockpm ?(.*)"))
+@borg.on(admin_cmd("blockhim ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -83,7 +83,7 @@ async def approve_p_m(event):
         if event.is_private:
             if is_approved(chat.id):
                 disapprove(chat.id)
-                await event.edit("Blocked PM")
+                await event.edit("Nikel BC MC BMC @XHACKERKUNAL BLOCK YOU..[{}](tg://user?id={})".format(firstname, chat.id)")
                 await asyncio.sleep(3)
                 await borg(functions.contacts.BlockRequest(chat.id))
 
