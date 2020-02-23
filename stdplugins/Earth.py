@@ -1,5 +1,5 @@
-# (c) @UniBorg
-# Original written by @UniBorg edit by @I_m_Rock
+# (c) @XHACKUNAL
+# Original written by @XHACKERKUNAL edit by @EONARMY
 
 from telethon import events
 import asyncio
