@@ -18,7 +18,7 @@ async def _(event):
             about=bio
         ))
         await event.edit("Succesfully changed my profile bio")
-    except Exception as e:  # pylint:disable=C0103,W0703
+    except Exception as e:  # pylint:disable=C0103,W0703 
         await event.edit(str(e))
 
 
