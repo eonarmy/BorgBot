@@ -1,8 +1,8 @@
 """
 Available Commands
-.fak
-.sux
-.kess"""
+.fuk
+.sex
+.kiss"""
 
 from telethon import events
 
@@ -26,7 +26,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "fak":
+    if input_str == "fuk":
 
         await event.edit(input_str)
 
@@ -63,7 +63,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "sux":
+    if input_str == "sex":
 
         await event.edit(input_str)
 
@@ -101,7 +101,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "kess":
+    if input_str == "kiss":
 
         await event.edit(input_str)
 
