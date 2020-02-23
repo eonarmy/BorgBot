@@ -10,7 +10,7 @@ borg.storage.CHAT_FLOOD = {}  # pylint:disable=E0602
 @borg.on(events.NewMessage(chats=Config.CHATS_TO_MONITOR_FOR_ANTI_FLOOD))  # pylint:disable=E0602
 async def _(event):
     if not event.chat_id in borg.storage.CHAT_FLOOD:  # pylint:disable=E0602
-        borg.storage.CHAT_FLOOD[event.chat_id] = {}  # pylint:disable=E0602
+        borg.storage.CHAT_FLOOD[event.chat_id] = {}  # pylint:disable=E0602 
     if event.chat_id in borg.storage.CHAT_FLOOD:  # pylint:disable=E0602
         try:
             # pylint:disable=E0602
