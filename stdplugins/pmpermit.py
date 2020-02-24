@@ -83,7 +83,7 @@ async def approve_p_m(event):
         if event.is_private:
             if is_approved(chat.id):
                 disapprove(chat.id)
-                await event.edit("Nikel BC MC BMC @XHACKERKUNAL BLOCK YOU..[{}](tg://user?id={})".format(firstname, chat.id)")
+                await event.edit("Nikel BC MC BMC @XHACKERKUNAL BLOCK YOU...")
                 await asyncio.sleep(3)
                 await borg(functions.contacts.BlockRequest(chat.id))
 
